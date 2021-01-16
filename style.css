@@ -58,6 +58,7 @@ h3 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-align: center;
 }
 
 .container-coding1 {
@@ -68,6 +69,7 @@ h3 {
   justify-content: center;
   align-items: center;
   transform: translateY(-11%);
+  text-align: center;
 }
 
 .container-pages {
@@ -86,7 +88,6 @@ h3 {
   justify-content: center;
   align-items: center;
   width: 100%;
-  text-align: center;
 }
 
 .links {
@@ -174,5 +175,10 @@ p {
 @media screen and (max-width: 375px) {
   .links {
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .container-coding1 {
+    transform: translateY(0%);
   }
 }
