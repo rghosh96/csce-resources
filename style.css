@@ -86,6 +86,7 @@ h3 {
   justify-content: center;
   align-items: center;
   width: 100%;
+  text-align: center;
 }
 
 .links {
@@ -168,4 +169,10 @@ p {
 .button-container {
   display: flex;
   justify-content: center;
+}
+
+@media screen and (max-width: 375px) {
+  .links {
+    flex-direction: column;
+  }
 }
