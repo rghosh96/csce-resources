@@ -161,7 +161,7 @@ p {
 #setup-option-windows,
 #setup-option-independant {
   visibility: hidden;
-  position: fixed;
+  position: absolute;
   z-index: 200;
   opacity: 0;
   transition: 0.5s ease-in;
