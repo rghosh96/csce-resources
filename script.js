@@ -9,7 +9,9 @@ window.onload = () => {
 
     for (let i =0; i < anchors.length; i++) {
         const anchor = anchors[i];
+        console.log(anchor)
         anchor.addEventListener('click', e => {
+            console.log(e)
             e.preventDefault();
             let target = e.target.href;
             transition_elem.classList.add('is-active');

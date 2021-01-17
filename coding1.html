@@ -6,7 +6,8 @@
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="stylesheet" type="text/css" href="transitions.css">
     <link rel="preconnect" href="https://fonts.gstatic.com"> 
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&family=Space+Mono&display=swap&family=Poppins:wght@700" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.5.5/css/simple-line-icons.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <title>foundations</title>
@@ -14,18 +15,18 @@
 <body>
     <div class="transition transition-2 is-active"></div>
     <div class="container-coding1">
-        <span> <a href="./index.html">home</a> / coding enviroment setup</span>
+        <span class="breadcrumbs"> <a href="./index.html">home</a> / coding enviroment setup</span>
         <h1>what os do you run?</h1>
         <hr>
         <div class="links coding">
-            <button class="box" id="mac" onClick="selectOS('mac')">
+            <div class="box" id="mac" onClick="selectOS('mac')">
                 <i class="fa fa-apple" aria-hidden="true"></i>
                 <p> mac </p> 
-            </button>
-            <button class="box" id="windows" onClick="selectOS('windows')">
+            </div>
+            <div class="box" id="windows" onClick="selectOS('windows')">
                 <i class="fa fa-windows" aria-hidden="true"></i>
                 <p> windows </p>
-            </button>
+            </div>
             <button class="box" id="independant" onClick="selectOS('independant')">
                 <i class="fa fa-desktop" aria-hidden="true"></i>
                 <p> os independant options </p>
@@ -37,10 +38,10 @@
         <br>
         <h1 id="setup-option">mac > what enviro do you wish to set up?</h1>
         <div  class="links coding">
-            <button class="box" id="mac" >
+            <div class="box">
                 <i class="fa fa-window-maximize" aria-hidden="true"></i>
-                <a href="./enviro-pages/mac-netbeans.html"> netbeans ide </a> 
-            </button>
+                <a href='./enviro-pages/mac-netbeans.html'> netbeans ide </a> 
+            </div>
             <button class="box" id="windows" >
                 <i class="fa fa-terminal" aria-hidden="true"></i>
                 <p> command line </p>
@@ -51,11 +52,11 @@
         <br>
         <h1 id="setup-option">windows > what enviro do you wish to set up?</h1>
         <div  class="links coding">
-            <button class="box" id="mac">
+            <button class="box">
                 <i class="fa fa-window-maximize" aria-hidden="true"></i>
                 <p> netbeans ide </p> 
             </button>
-            <button class="box" id="windows" >
+            <button class="box" >
                 <i class="fa fa-terminal" aria-hidden="true"></i>
                 <p> command line </p>
             </button>
@@ -65,7 +66,7 @@
         <br>
         <h1 id="setup-option"> independant > what enviro do you wish to set up?</h1>
         <div  class="links coding">
-            <button class="box" id="mac" >
+            <button class="box">
                 <i class="fa fa-wifi" aria-hidden="true"></i>
                 <p> online gdb </p> 
             </button>
@@ -80,11 +81,36 @@
 </div>
 <script src="script.js"></script>
 <script>
-    function selectOS(os) {
+    function invert(buttonType) {
+        const id = '#'+buttonType;
+        document.getElementById(buttonType).style.backgroundColor = 'rgb(106, 22, 35)'
+        const buttonItems = document.querySelector(id).children;
+        console.log("INVERT")
+        console.log(buttonItems)
+        for (let i =0; i < buttonItems.length; i++) {
+            buttonItems[i].style.color = 'white'
+        }
+    }
+
+    function revert(buttonType) {
+        console.log("REVERT")
+        console.log(buttonType)
+        const id = '#'+buttonType;
+        document.getElementById(buttonType).style.backgroundColor = 'white'
+        const buttonItems = document.querySelector(id).children;
         
+        console.log(buttonItems)
+        buttonItems[0].style.color='rgb(106, 22, 35)'
+        buttonItems[1].style.color='rgb(87, 87, 87)'
+    }
+
+
+    function selectOS(os) {
         switch(os) {
             case 'mac':
-            console.log("selected "+ os)
+                invert(os)
+                revert('windows')
+                revert('independant')
                 document.getElementById("setup-option-mac").style.visibility='visible';
                 document.getElementById("setup-option-mac").style.opacity='1';
                 document.getElementById("setup-option-windows").style.opacity='0';
@@ -93,7 +119,9 @@
                 document.getElementById("setup-option-independant").style.visibility='hidden';
                 break;
             case 'windows':
-            console.log("selected "+ os)
+                invert(os)
+                revert('mac')
+                revert('independant')
                 document.getElementById("setup-option-windows").style.opacity='1';
                 document.getElementById("setup-option-windows").style.visibility='visible';
                 document.getElementById("setup-option-mac").style.opacity='0';
@@ -102,7 +130,9 @@
                 document.getElementById("setup-option-independant").style.visibility='hidden';
                 break;
             case 'independant':
-            console.log("selected "+ os)
+                invert(os)
+                revert('mac')
+                revert('windows')
                 document.getElementById("setup-option-independant").style.opacity='1';
                 document.getElementById("setup-option-independant").style.visibility='visible';
                 document.getElementById("setup-option-mac").style.opacity='0';
