@@ -25,21 +25,22 @@
 
 .content {
   position: relative;
-  margin: 50px 150px 0 150px;
+  margin: 50px 150px 50px 150px;
   padding: 50px;
   border: 1px solid var(--red);
   border-radius: 30px;
 }
 
 .text {
-  font-family: var(--sans-serif);
-  font-size: 17px;
+  font-family: var(--sans-serif-text);
+  font-size: 19px;
   margin: 0 0 9px 0 !important;
   padding: 0;
 }
 
 .code,
 .code a {
+  font-size: 17px;
   color: var(--red);
   text-align: center;
   font-family: var(--monospace);
@@ -60,7 +61,7 @@
   font-family: var(--monospace);
   margin: 0 0 9px 0 !important;
   color: var(--grey);
-  font-size: 15px;
+  font-size: 17px;
 }
 
 .inline-link {
@@ -78,7 +79,7 @@
 
 .callout {
   margin: 10px 25px 10px 25px;
-  font-family: var(--sans-serif);
+  font-family: var(--sans-serif-text);
   background-color: var(--light-grey);
   color: var(--black);
   border-radius: 30px;
@@ -92,7 +93,7 @@ img {
   margin-left: auto;
   margin-right: auto;
   margin-top: 15px;
-  margin-bottom: 15px;
+  margin-bottom: 25px;
   width: 50%;
 }
 

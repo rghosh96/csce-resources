@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../style.css">
+    <link rel="stylesheet" type="text/css" href="../transitions.css">
+    <link rel="stylesheet" type="text/css" href="../pages.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&family=Space+Mono&display=swap&family=Poppins:wght@700&family=Nunito:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.5.5/css/simple-line-icons.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <title>foundations</title>
+</head>
+<body>
+    <div class="transition transition-3 is-active"></div>
+    <div class="container-pages">
+        <div class="header">
+        <span class="breadcrumbs"> <a href="../index.html">home</a> / <a href="../coding1.html">coding enviro</a> / windows os: netbeans</span>
+        <h1>windows os: installing netbeans</h1>
+    </div>
+
+    <div class="content">
+        <h1 class="steps">preliminary step (jdk + mingw)</h1>
+        <p class="text">☆ note: you can skip this step if you already have the java developer kit and mingw installed</p>
+        <p class="text">1. download and install the latest java developer kit from the following site:</p>
+        <p class="code">
+            <a href="https://www.oracle.com/java/technologies/javase-jdk14-downloads.html">https://www.oracle.com/java/technologies/javase-jdk14-downloads.html</a>
+        </p>
+        <p class="text">2. for windows, we also have to download & install a c++ compiler called mingw. you can do so from here:</p>
+        <p class="code">
+            <a href="https://osdn.net/projects/mingw/releases/">https://osdn.net/projects/mingw/releases/</a>
+        </p>
+        <p class="text">3. click the blue button with the windows icon that has 
+            <span class="inline-emphasis">mingw-get-setup.exe</span> next to it (about halfway down the page):</p>
+        <img src="images/mingw-1.png">
+        <p class="text">4. download & install</p>
+        <p class="text">5. once installed a window like this pops up:</p>
+        <img src="images/mingw-2.png">
+        <p class="text">you want to mark the boxes as shown above for installation. specifically:</p>
+        <p class="code">mingw32-base-bin</p>
+        <p class="code">mingw32-gcc-g++-bin</p>
+        <p class="code">msys-base-bin</p>
+        <p class="text">6. now click <span class="inline-emphasis">installation</span>
+            (in the top left corner) > <span class="inline-emphasis">apply changes</span></p>
+        <p class="text">7. it might take a minute, but once it's done, you're good to go!</p>
+
+        <h1 class="steps">installation steps</h1>
+        <p class="text">1. download netbeans 8.2 from the following link:</p>
+        <p class="code">
+            <a href="https://netbeans.org/downloads/8.2/rc/">https://netbeans.org/downloads/8.2/rc/</a>
+        </p><p class="callout">☆ note: it MUST be netbeans 8.2, as this is the easiest version to download that supports c++!</p>
+        <p class="text">2. download from the c++ column, as shown below:</p>
+        <img src="images/netbeans.png">
+        <p class="text">3. and once that is installed & downloaded, you should be good to go!</p>
+        
+
+        <h1 class="steps">basic use</h1>
+        <p class="text">1. launch netbeans</p>
+        <p class="text">2. click the orange folder at the top right with the little plus sign (create new project):</p>
+        <img src="images/netbeans_usage_1.png">
+        <p class="text">3. under categories, select <span class="inline-emphasis"> c/c++ </span> under projects, then 
+            select <span class="inline-emphasis"> c/c++ application </span> </p>
+        <p class="callout">☆ note: it is SUPER important you select c/c++ application!!!</p>
+        <img src="images/netbeans_usage_2.png">
+        <p class="text">4. click next. on the following location, be sure to 
+            <span class="inline-emphasis"> change the project location </span>
+             to a place on your computer where you can easily find it, and click finish</p>
+        <p class="callout">☆ note: make sure the Tool Collection displays the following (if not, something went wrong in the mingw installation):
+        </p>
+        <img src="images/netbeans-mingw.png">
+        <p class="text">5. in the left panel now, you should see your application. expand 
+            <span class="inline-emphasis"> source files </span>
+            and you should see a <span class="inline-emphasis"> main.cpp. </span> 
+            double click that, and start coding! </p> 
+        <img src="images/netbeans_usage_3.png">
+        <p class="text">6. once you have written your program, click the green play button (to the right of the “Debug” dropdown) to compile & run the program. 
+            (if you get any errors about a debugger tool missing at any point, just exit and don’t worry about it)</p>
+        <p>& that is it! happy coding!! :D</p>
+
+    </div>
+    </div>
+<script src="../script.js"></script>
+</body>
+</html>

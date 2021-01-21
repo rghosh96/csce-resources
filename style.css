@@ -8,6 +8,7 @@
   --box-shadow-dark: rgba(0, 0, 0, 0.324);
   --box-shadow-light: rgba(255, 255, 255, 0.091);
   --sans-serif: "Montserrat", sans-serif;
+  --sans-serif-text: "Nunito", sans-serif;
   --monospace: "Space Mono", monospace;
   --bold: "Poppins", sans-serif;
 }
