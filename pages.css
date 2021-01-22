@@ -1,6 +1,10 @@
 .container-pages {
-  min-height: 100vh;
+  height: max-content;
   width: 100%;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .header {
@@ -21,14 +25,6 @@
   padding: 0;
   margin-top: 25px;
   text-transform: lowercase;
-}
-
-.content {
-  position: relative;
-  margin: 50px 150px 50px 150px;
-  padding: 50px;
-  border: 1px solid var(--red);
-  border-radius: 30px;
 }
 
 .text {
@@ -97,10 +93,94 @@ img {
   width: 50%;
 }
 
+#netbeans-windows,
+#netbeans-mac {
+  display: none;
+  width: 80%;
+  border: 1px solid var(--red);
+  border-radius: 30px;
+  margin: 50px;
+  padding: 20px;
+}
+
+.show {
+  animation: scale-display 0.3s;
+  display: block !important;
+  height: 100%;
+}
+
+.hide {
+  animation: scale-display--reversed 0.3s;
+  animation-fill-mode: forwards;
+  display: block;
+}
+
+.button-options {
+  display: flex;
+  flex-direction: row;
+}
+
+#option-netbeans-mac,
+#option-netbeans-windows {
+  margin: 10px;
+  padding: 11px;
+  border: 1px solid var(--red);
+  border-radius: 20px;
+  background-color: white;
+  font-size: 17px;
+  font-family: var(--monospace);
+  letter-spacing: 2px;
+  color: var(--red);
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+#option-netbeans-mac:hover,
+#option-netbeans-windows:hover {
+  color: var(--white);
+  background-color: var(--red);
+  letter-spacing: 3px;
+}
+
+@keyframes scale-display {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+    -webkit-transform: scale(0);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+    -webkit-transform: scale(1);
+  }
+}
+
+@keyframes scale-display--reversed {
+  0% {
+    display: inline-flex;
+    opacity: 1;
+    transform: scale(1);
+    -webkit-transform: scale(1);
+  }
+  99% {
+    display: inline-flex;
+    opacity: 0;
+    transform: scale(0);
+    -webkit-transform: scale(0);
+  }
+  100% {
+    display: none;
+    opacity: 0;
+    transform: scale(0);
+    -webkit-transform: scale(0);
+  }
+}
+
 @media screen and (max-width: 500px) {
-  .content {
-    margin: 25px 15px 0 15px;
-    padding: 25px;
+  #netbeans-windows,
+  #netbeans-mac {
+    width: 90%;
   }
   .steps {
     font-size: 15px;

@@ -16,135 +16,29 @@
     <div class="transition transition-2 is-active"></div>
     <div class="container-coding1">
         <span class="breadcrumbs"> <a href="./index.html">home</a> / coding enviroment setup</span>
-        <h1>what os do you run?</h1>
+        <h1>select your coding environment:</h1>
+        <p  class="file-link" onclick="openInNewTab('pdfs/codingenviro.pdf');">[ download master pdf here ]</p>
         <hr>
         <div class="links coding">
-            <div class="box" id="mac" onClick="selectOS('mac')">
-                <i class="fa fa-apple" aria-hidden="true"></i>
-                <p> mac </p> 
-            </div>
-            <div class="box" id="windows" onClick="selectOS('windows')">
-                <i class="fa fa-windows" aria-hidden="true"></i>
-                <p> windows </p>
-            </div>
-            <button class="box" id="independant" onClick="selectOS('independant')">
-                <i class="fa fa-desktop" aria-hidden="true"></i>
-                <p> os indep </p>
-            </button>
-        </div>
-
-        <div class="button-container">
-        <div id="setup-option-mac">
-        <br>
-        <h1 id="setup-option">mac > what enviro do you wish to set up?</h1>
-        <div  class="links coding">
-            <div class="box">
-                <i class="fa fa-window-maximize" aria-hidden="true"></i>
-                <a href='./enviro-pages/mac-netbeans.html'> netbeans ide </a> 
-            </div>
-            <button class="box" id="windows" >
-                <i class="fa fa-terminal" aria-hidden="true"></i>
-                <p> command line </p>
-            </button>
-        </div></div>
-
-        <div id="setup-option-windows">
-        <br>
-        <h1 id="setup-option">windows > what enviro do you wish to set up?</h1>
-        <div  class="links coding">
             <button class="box">
                 <i class="fa fa-window-maximize" aria-hidden="true"></i>
-                <a href='./enviro-pages/windows-netbeans.html'> netbeans ide </a> 
+                <a href="enviro-pages/netbeans.html"> netbeans ide </a>
             </button>
-            <button class="box" >
+            <button class="box">
                 <i class="fa fa-terminal" aria-hidden="true"></i>
                 <p> command line </p>
             </button>
-        </div></div>
-
-        <div id="setup-option-independant">
-        <br>
-        <h1 id="setup-option"> independant > what enviro do you wish to set up?</h1>
-        <div  class="links coding">
             <button class="box">
                 <i class="fa fa-wifi" aria-hidden="true"></i>
-                <p> online gdb </p> 
+                <a href='./enviro-pages/onlinegdb.html'> online gdb </a>
             </button>
-            <button class="box" id="windows" >
+            <button class="box">
                 <i class="fa fa-user" aria-hidden="true"></i>
-                <p> citrix workspaces </p>
+                <a href='./enviro-pages/citrix.html'> citrix </a>
             </button>
         </div>
-        </div>
-    </div>
 
 </div>
 <script src="script.js"></script>
-<script>
-    function invert(buttonType) {
-        const id = '#'+buttonType;
-        document.getElementById(buttonType).style.backgroundColor = 'rgb(106, 22, 35)'
-        const buttonItems = document.querySelector(id).children;
-        console.log("INVERT")
-        console.log(buttonItems)
-        for (let i =0; i < buttonItems.length; i++) {
-            buttonItems[i].style.color = 'white'
-        }
-    }
-
-    function revert(buttonType) {
-        console.log("REVERT")
-        console.log(buttonType)
-        const id = '#'+buttonType;
-        document.getElementById(buttonType).style.backgroundColor = 'white'
-        const buttonItems = document.querySelector(id).children;
-        
-        console.log(buttonItems)
-        buttonItems[0].style.color='rgb(106, 22, 35)'
-        buttonItems[1].style.color='rgb(87, 87, 87)'
-    }
-
-
-    function selectOS(os) {
-        switch(os) {
-            case 'mac':
-                invert(os)
-                revert('windows')
-                revert('independant')
-                document.getElementById("setup-option-mac").style.visibility='visible';
-                document.getElementById("setup-option-mac").style.opacity='1';
-                document.getElementById("setup-option-windows").style.opacity='0';
-                document.getElementById("setup-option-windows").style.visibility='hidden';
-                document.getElementById("setup-option-independant").style.opacity='0';
-                document.getElementById("setup-option-independant").style.visibility='hidden';
-                break;
-            case 'windows':
-                invert(os)
-                revert('mac')
-                revert('independant')
-                document.getElementById("setup-option-windows").style.opacity='1';
-                document.getElementById("setup-option-windows").style.visibility='visible';
-                document.getElementById("setup-option-mac").style.opacity='0';
-                document.getElementById("setup-option-mac").style.visibility='hidden';
-                document.getElementById("setup-option-independant").style.opacity='0';
-                document.getElementById("setup-option-independant").style.visibility='hidden';
-                break;
-            case 'independant':
-                invert(os)
-                revert('mac')
-                revert('windows')
-                document.getElementById("setup-option-independant").style.opacity='1';
-                document.getElementById("setup-option-independant").style.visibility='visible';
-                document.getElementById("setup-option-mac").style.opacity='0';
-                document.getElementById("setup-option-mac").style.visibility='hidden';
-                document.getElementById("setup-option-windows").style.opacity='0';
-                document.getElementById("setup-option-windows").style.visibility='hidden';
-                break;
-            default:
-                break;
-        }
-        
-    }
-</script>
 </body>
 </html>

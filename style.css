@@ -55,6 +55,13 @@ h3 {
   padding: 8px 16px;
 }
 
+h4 {
+  font-family: var(--bold);
+  color: var(--grey);
+  font-size: 15px;
+  letter-spacing: 2px;
+}
+
 .container {
   min-height: 100vh;
   padding: 10px;
@@ -67,12 +74,12 @@ h3 {
 
 .container-coding1 {
   min-height: 100vh;
+  overflow: auto;
   padding: 10px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  transform: translateY(-11%);
   text-align: center;
 }
 
@@ -147,23 +154,6 @@ p {
   color: var(--white);
 }
 
-#setup-option-mac,
-#setup-option-windows,
-#setup-option-independant {
-  visibility: hidden;
-  position: absolute;
-  z-index: 200;
-  opacity: 0;
-  transition: 0.5s ease-in;
-}
-
-.button-container {
-  position: relative;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}
-
 .breadcrumbs a {
   text-decoration: none;
   color: var(--red);
@@ -175,13 +165,36 @@ p {
   letter-spacing: 2px;
 }
 
+.file-link {
+  color: var(--red);
+  transition: 0.2s ease-in-out;
+}
+
+.file-link:hover {
+  color: var(--red);
+  transition: 0.2s ease-in-out;
+  letter-spacing: 1.5px;
+  cursor: pointer;
+}
+
 @media screen and (max-width: 500px) {
   .links {
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
   }
-  .container-coding1 {
-    transform: translateY(0%);
+
+  .coding .box {
+    height: 115px;
+    width: 115px !important;
+  }
+  .coding .box {
+    font-size: 9px !important;
+  }
+
+  .coding .box i {
+    font-size: 35px;
   }
 }
