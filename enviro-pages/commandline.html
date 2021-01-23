@@ -40,7 +40,7 @@
                 it's DIFFERENT from VS Code -- it's BLUE. you want the BLUE one!
             </p>
 
-        <h1 class="steps">steps to use.</h1>
+        <h1 class="steps">compiling & running c++ programs.</h1>
         <p class="text">1) create a program in your text editor. save it somewhere easily accessible.</p>
         <p class="text">2) open up the terminal. (can command+spacebar and search for it). you get an interface that looks something like this:</p>
         <img src="images/terminal.png">
@@ -89,7 +89,79 @@
     </div>
 
     <div id="cline-windows">
-        <h1 class="steps">preliminary step (jdk download)</h1>
+        <h1 class="steps">preliminary step (a good text editor + mingw)</h1>
+        <p class="text"><span class="note">☆ note: </span>you can skip this step if you already have a preferred text editor & mingw installed</p>
+        <p class="text"> 1) i personally looooveeee VS Code. a lot of my friends and even people i worked with love
+            it too! it has tons of useful helpful extensions to really
+            customize your workflow. you can download it from here:</p>
+        <p class="code">
+            <a href="https://code.visualstudio.com/">https://code.visualstudio.com/</a>
+        </p>
+        <p class="callout">☆ note: do NOT get just regular visual studio (it’s purple). that’s the IDE version, and has some serious weird drawbacks. 
+            it's DIFFERENT from VS Code -- it's BLUE. you want the BLUE one!
+        </p>
+
+        <p class="text">2. for windows, we also have to download & install a c++ compiler called mingw. you can do so from here:</p>
+        <p class="code">
+            <a href="https://osdn.net/projects/mingw/releases/">https://osdn.net/projects/mingw/releases/</a>
+        </p>
+        <p class="text">3. click the blue button with the windows icon that has 
+            <span class="inline-emphasis">mingw-get-setup.exe</span> next to it (about halfway down the page):</p>
+        <img src="images/mingw-1.png">
+        <p class="text">4. download & install</p>
+        <p class="text">5. once installed a window like this pops up:</p>
+        <img src="images/mingw-2.png">
+        <p class="text">you want to mark the boxes as shown above for installation. specifically:</p>
+        <p class="code">mingw32-base-bin</p>
+        <p class="code">mingw32-gcc-g++-bin</p>
+        <p class="code">msys-base-bin</p>
+        <p class="text">6. now click <span class="inline-emphasis">installation</span>
+            (in the top left corner) > <span class="inline-emphasis">apply changes</span></p>
+        <p class="text">7. it might take a minute, but once it's done, you're good to go!</p>
+
+        <h1 class="steps">compiling & running c++ programs.</h1>
+        <p class="text">1) create a program in your text editor. save it somewhere easily accessible.</p>
+        <p class="text">2) open up the command prompt (you can search for it on your computer if need be). a window with
+            a black background should pop up.
+        </p>
+        <p class="text">3) now we are going to learn some linux-ish commands! here are the most helpful ones.</p>
+        <ul>
+            <li>cd
+                <ul>
+                    <li>used to 
+                        <span class="inline-bold">change directories</span>, and navigate around your computer. so if i wanted to access my Desktop, i use 
+                        <span class="inline-emphasis">cd Desktop</span>
+                    </li>
+                    <li>if i want to go up a directory (like say i go into a folder on my desktop, and want to go back up to my desktop), i use 
+                        <span class="inline-emphasis">cd ..</span>
+                    </li>
+                </ul>
+            </li>
+            <li>dir
+                <ul>
+                    <li>used to list everything in the <span class="inline-bold">current directory</span>. so if you were in Desktop, 
+                        and used <span class="inline-emphasis">dir</span>, 
+                        it would list all the files on your desktop!
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <p class="callout">☆ PAUSE here and try it for yourself! navigate around your mac using these 
+            commands. you gotta do it yourself to get a feel for it!
+        </p>
+        <p class="text">4) now, to compile and run a c++ file, make sure you are in the same directory as the file. then run the following two commands:</p>
+        <p class="code">g++ -Wall [filename].cpp -o output.exe</p>
+        <p class="code">output.exe</p>
+        <p class="text">the first command compiles the program. this is where you will get errors & warnings (if any). the second runs the program. here’s 
+            someone compiling & running a c++ file below:</p>
+        <img src="images/commandprompt.png">
+        <p class="text">as you can see on the first line, a file called “arraysndptrs.cpp” was compiled. 
+            there was a warning, which is displayed. then on the second line, the program was ran, and it outputted in the terminal!</p>
+        <p class="callout">☆ if you are compiling multiple files (ex, a c++ main file and a class file)
+            you MUST compile ALL .cpp files (NOT the .h files!); ie, <span class="code">g++ -Wall [main].cpp [class1].cpp -o output.exe</span>
+            OR, if all these files are in the same folder, to automatically compile ALL c++ files, run
+            <span class="code">g++ -Wall *.cpp -o output.exe</span> (my fav command)
+        </p>
     </div>
 
 
