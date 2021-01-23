@@ -47,3 +47,26 @@ function toggleNetbeans(os) {
             break;
     }
 }
+
+function toggleCL(os) {
+    switch(os) {
+        case 'cline-windows':
+            document.getElementById('cline-mac').classList.remove('show');
+            document.getElementById(os).classList.add('show');
+            document.getElementById('option-cline-windows').style.color = 'var(--white)';
+            document.getElementById('option-cline-windows').style.backgroundColor = 'var(--red)';
+            document.getElementById('option-cline-mac').style.color = 'var(--red)';
+            document.getElementById('option-cline-mac').style.backgroundColor = 'var(--white)';
+            break;
+        case 'cline-mac':
+            document.getElementById(os).classList.add('show');
+            document.getElementById('cline-windows').classList.remove('show');
+            document.getElementById('option-cline-mac').style.color = 'var(--white)';
+            document.getElementById('option-cline-mac').style.backgroundColor = 'var(--red)';
+            document.getElementById('option-cline-windows').style.color = 'var(--red)';
+            document.getElementById('option-cline-windows').style.backgroundColor = 'var(--white)';
+            break;
+        default:
+            break;
+    }
+}

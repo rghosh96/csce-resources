@@ -25,6 +25,7 @@
   padding: 0;
   margin-top: 25px;
   text-transform: lowercase;
+  margin-bottom: 5px;
 }
 
 .text {
@@ -32,6 +33,7 @@
   font-size: 19px;
   margin: 0 0 9px 0 !important;
   padding: 0;
+  color: var(--grey);
 }
 
 .code,
@@ -60,6 +62,12 @@
   font-size: 17px;
 }
 
+.inline-bold {
+  font-family: var(--bold);
+  color: var(--grey);
+  font-size: 13px;
+}
+
 .inline-link {
   font-family: var(--monospace);
   color: var(--red);
@@ -73,6 +81,12 @@
   letter-spacing: 0.5px;
 }
 
+.note {
+  font-family: var(--bold);
+  color: var(--light-red);
+  font-size: 15px;
+}
+
 .callout {
   margin: 10px 25px 10px 25px;
   font-family: var(--sans-serif-text);
@@ -81,11 +95,15 @@
   border-radius: 30px;
 }
 
+ul {
+  margin-left: 40px;
+}
+
 img {
   border-radius: 30px;
   box-shadow: 12px 12px 16px 0 var(--box-shadow-dark),
     -5px -3px 16px 0 var(--box-shadow-light);
-  display: block;
+  display: flex;
   margin-left: auto;
   margin-right: auto;
   margin-top: 15px;
@@ -94,7 +112,9 @@ img {
 }
 
 #netbeans-windows,
-#netbeans-mac {
+#netbeans-mac,
+#cline-windows,
+#cline-mac {
   display: none;
   width: 80%;
   border: 1px solid var(--red);
@@ -121,7 +141,9 @@ img {
 }
 
 #option-netbeans-mac,
-#option-netbeans-windows {
+#option-netbeans-windows,
+#option-cline-mac,
+#option-cline-windows {
   margin: 10px;
   padding: 11px;
   border: 1px solid var(--red);
@@ -136,7 +158,9 @@ img {
 }
 
 #option-netbeans-mac:hover,
-#option-netbeans-windows:hover {
+#option-netbeans-windows:hover,
+#option-cline-mac:hover,
+#option-cline-windows:hover {
   color: var(--white);
   background-color: var(--red);
   letter-spacing: 3px;
@@ -184,5 +208,8 @@ img {
   }
   .steps {
     font-size: 15px;
+  }
+  img {
+    width: 100%;
   }
 }
