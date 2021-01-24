@@ -136,6 +136,12 @@ p {
   overflow: hidden;
 }
 
+.center {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
 .box i {
   color: var(--red);
   font-size: 25px;
@@ -202,5 +208,9 @@ p {
 
   .coding .box i {
     font-size: 35px;
+  }
+
+  .subtitle {
+    width: 100%;
   }
 }
