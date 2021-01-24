@@ -20,6 +20,12 @@ window.onload = () => {
     }
 }
 
+window.onpageshow = function(event) {
+    if (event.persisted) {
+        window.location.reload() 
+    }
+};
+
 function openInNewTab(url) {
     var win = window.open(url, '_blank');
     win.focus();
