@@ -1,6 +1,6 @@
 :root {
-  --red: rgb(106, 22, 35);
-  --light-red: rgb(133, 60, 70);
+  --red: rgb(106, 22, 35) !important;
+  --light-red: rgb(109, 50, 58);
   --grey: rgb(87, 87, 87);
   --light-grey: rgb(206, 206, 206);
   --black: black;
@@ -34,7 +34,7 @@ hr {
 
 h1 {
   font-family: var(--sans-serif);
-  font-size: 21px;
+  font-size: 21px !important;
   text-transform: uppercase;
   letter-spacing: 5px;
   padding: 8px 16px;
@@ -42,7 +42,7 @@ h1 {
 
 h2 {
   font-family: var(--sans-serif);
-  font-size: 21px;
+  font-size: 21px !important;
   text-transform: uppercase;
   letter-spacing: 2px;
   padding: 8px 16px;
@@ -50,7 +50,7 @@ h2 {
 
 h3 {
   font-family: var(--sans-serif);
-  font-size: 17px;
+  font-size: 17px !important;
   letter-spacing: 2px;
   padding: 8px 16px;
 }
@@ -58,8 +58,14 @@ h3 {
 h4 {
   font-family: var(--bold);
   color: var(--grey);
-  font-size: 15px;
+  font-size: 15px !important;
   letter-spacing: 2px;
+}
+
+.subtitle {
+  width: 40%;
+  font-family: var(--sans-serif);
+  font-size: 17px;
 }
 
 .container {
@@ -155,8 +161,8 @@ p {
 }
 
 .breadcrumbs a {
-  text-decoration: none;
-  color: var(--red);
+  text-decoration: none !important;
+  color: var(--red) !important;
   transition: 0.2s ease-in;
 }
 
