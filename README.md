@@ -4,7 +4,7 @@ a vanilla JS, html, css site with a bunch of resources for uark CSCE students. t
 
 [**visit here !!!**](https://rghosh96.github.io/foundations/)
 
-## Making a PR's to Update
+## Logging Issues to Update
 find a mistake somewhere? is a certain tutorial outdated, & needs to be updated? do you have another tutorial that could be useful that should be added? please log an issue, and **be sure to mark it with the appropriate label**. the labels are as follows:
 
 ![label-bug](https://img.shields.io/badge/-bug-red)
