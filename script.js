@@ -12,7 +12,9 @@ window.onload = () => {
             console.log(e)
             e.preventDefault();
             let target = e.target.href;
-            transition_elem.classList.add('is-active');
+            if (!target.includes("mailto")) {
+                transition_elem.classList.add('is-active');
+            }
             setTimeout(() => {
                 window.location.href=target;
             }, 300);

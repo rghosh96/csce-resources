@@ -74,6 +74,11 @@ h5 {
   font-size: 17px;
 }
 
+.subtitle-code {
+  width: 40%;
+  font-size: 17px;
+}
+
 .container {
   min-height: 100vh;
   padding: 10px;
@@ -216,7 +221,8 @@ p {
     font-size: 35px;
   }
 
-  .subtitle {
+  .subtitle,
+  .subtitle-code {
     width: 100%;
   }
 }
