@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../style.css">
+    <link rel="stylesheet" type="text/css" href="../transitions.css">
+    <link rel="stylesheet" type="text/css" href="../pages.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&family=Space+Mono&display=swap&family=Poppins:wght@700&family=Nunito:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.5.5/css/simple-line-icons.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <title>foundations</title>
+</head>
+<body>
+    <div class="transition transition-3 is-active"></div>
+    <div class="container-pages">
+        <div class="header">
+        <span class="breadcrumbs"> <a href="../index.html">home</a> / <a href="../turingfilezilla1.html">turing & filezilla</a> / turing</span>
+        <h1>accessing turing</h1>
+    </div>
+
+    <div class="onlinegdb-citrix">
+        <p class="steps">video walkthrough:</p>
+        <p class="text">the following provides a visual walkthrough. steps detailed after is basically the same thing! </p>
+        <div class="center">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/TWUNF53mk90" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <br>
+        <p class="steps">steps to use</p>
+        <p class="text">1. depending on your OS, you will use one of the following:</p>
+        <ul>
+            <li><span class="inline-bold">mac os: </span> terminal
+                <ul>
+                    <li>you can command+spacebar to search for it or use spotlight to search</li>
+                </ul>
+            </li>
+            <li><span class="inline-bold">windows os: </span> command prompt
+                <ul>
+                    <li>you can search "command prompt" on your computer</li>
+                    <li>☆ NOTE: when you open command prompt, on the second line check it's 2018 Microsoft 
+                        Corporation or later -- ssh is built into these versions for sure, but i'm not sure about later versions.
+                        you may need to download an SSH clent such as PuTTY
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <br>
+        <p class="text">2. now to ssh onto Turing, type in the following command:</p>
+        <p class="code">
+            ssh YOURuarkID@turing.csce.uark.edu
+        </p>
+        <p class="text">3. hit enter, & you will be prompted for your uark password. you won't see it as you enter it, but it's registering it!</p>
+        <p class="text">4. hit enter; it might ask if you want to continue, type <span class="inline-bold">yes</span></p>
+        <p class="text">5. and you're in! use linux commands to navigate the virtual environment. if you need refreshers, 
+            <a class="inline-link" href="/turing-f-pages/linux.html">click here</a>
+        </p>
+        <p class="text">☆ below is an example of my turing environment:</p>
+        <img src="images/turing-1.png">
+        <br> 
+    </div>
+
+    </div>
+<script src="../script.js"></script>
+</body>
+</html>

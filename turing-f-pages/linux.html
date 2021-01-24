@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../style.css">
+    <link rel="stylesheet" type="text/css" href="../transitions.css">
+    <link rel="stylesheet" type="text/css" href="../pages.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&family=Space+Mono&display=swap&family=Poppins:wght@700&family=Nunito:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.5.5/css/simple-line-icons.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <title>foundations</title>
+</head>
+<body>
+    <div class="transition transition-3 is-active"></div>
+    <div class="container-pages">
+        <div class="header">
+        <span class="breadcrumbs"> <a href="../index.html">home</a> / <a href="../turingfilezilla1.html">turing & filezilla</a> / linux</span>
+        <h1>basic linux commands</h1>
+        <hr>
+        <p class="subtitle">some basic linux commands to help you navigate your terminal or Turing environment, as well as compile c++ files. these
+            are the ones i personally use the most, although there are more very useful ones out there! this is bare minimum to get you started.
+        </p>
+    </div>
+
+    <div class="onlinegdb-citrix">
+        <h5>ls</h5>
+        <p class="text">
+            This command will list everything in the current directory.</p>
+        <br>
+
+        <h5>cd [folder name]</h5>
+        <p class="text">
+            Entering “cd” followed by a folder name will move u into that folder. For example, “cd
+            project3” will move you into the project3 folder.</p>
+        <p class="callout">☆ note: if using windows command prompt, <span class="inline-emphasis">cd</span> will be
+            <span class="inline-emphasis">dir</span></p>
+        <p class="callout">
+            ☆ note: i HIGHLY recommend NOT using spaces in your folder names, to keep things simple</p>
+        <br>
+
+        <h5>cd ..</h5>
+        <p class="text">Entering “cd” followed by two dots (there IS a space in between cd & the two dots) moves you back up one directory. For example, if
+            you “cd ..” from inside the project4 folder, you will be back at your home directory</p>
+        <br>
+
+        <h5>exit</h5>
+        <p class="text">Exits Turing and returns to ur normal terminal/command prompt.</p>
+        <br>
+
+        <h5>g++ -Wall *.cpp -o output</h5>
+        <h5>./output</h5>
+        <p class="text">These are the big commands! Once inside your project folder, run these two
+            commands to first compile ur program, and then run it. works if you have just one cpp file, or multiple cpp files (for classes)</p>
+        <p class="callout">
+            ☆ note: on windows command prompt, it's <span class="inline-emphasis">g++ -Wall *.cpp -o output.exe</span> then 
+            <span class="inline-emphasis">output.exe</span> instead</p>
+
+    </div>
+
+    </div>
+<script src="../script.js"></script>
+</body>
+</html>

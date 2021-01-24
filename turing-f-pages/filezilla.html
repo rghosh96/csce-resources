@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../style.css">
+    <link rel="stylesheet" type="text/css" href="../transitions.css">
+    <link rel="stylesheet" type="text/css" href="../pages.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&family=Space+Mono&display=swap&family=Poppins:wght@700&family=Nunito:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.5.5/css/simple-line-icons.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <title>foundations</title>
+</head>
+<body>
+    <div class="transition transition-3 is-active"></div>
+    <div class="container-pages">
+        <div class="header">
+        <span class="breadcrumbs"> <a href="../index.html">home</a> / <a href="../turingfilezilla1.html">turing & filezilla</a> / filezilla</span>
+        <h1>filezilla file transfer</h1>
+        <hr>
+        <p class="subtitle">the purpose of filezilla is to move files between your local machine (laptop/computer you are using) & Turing so you can
+            test your code. My suggestion: write & develop your programs on your laptop (Netbeans, VS Code, onlnie gdb, etc), then once you are done,
+            transfer to Turing & make sure it works there
+        </p>
+    </div>
+
+    <div class="onlinegdb-citrix">
+        <p class="steps">video walkthrough:</p>
+        <p class="text">the following provides a visual walkthrough. steps detailed after is basically the same thing! </p>
+        <div class="center">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/80f27N1OQcQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <br>
+        <p class="steps">preliminary step</p>
+        <p class="text">1. download filezilla from the following link:</p>
+        <p class="code">
+            <a href="https://filezilla-project.org/">https://filezilla-project.org/</a>
+        </p>
+        <p class="steps">transferring files</p>
+        <p class="text">First, let's go into my Turing and take a look at what files i already have there.</p>
+        <img src="images/filezilla-1.png">
+        <p class="text">As you can see, i currently have 10 folders/files in my Turing environment (dbhw1,
+            hw1a, hw3, etc). After this step-by-step, we will have added a new folder here.</p>
+        <p class="text"> Now let’s go back to my <span class="inline-bold">regular computer</span>, and say i just completed lab7. I have the
+            <span class="inline-bold">folder</span> for the assignment just on my desktop on my computer. In this example, let’s
+            say i want to copy the <span class="inline-bold">lab7 folder</span> into Turing so i can run it. (the screenshot below
+            highlights the folder on my desktop i want to copy over)</p>
+        <img src="images/filezilla-2.png" style="width: 30%">
+        <p class="text"> Now that you (hopefully) have an idea about what we’re doing, let’s start copying
+            some files over!</p>
+        <p class="text">1. Open Filezilla. you'll get a window with a lot of things going on. for now, just focus on 
+            the top bar, & enter the following:
+        </p>
+        <ul>
+            <li>host: <span class="inline-emphasis">turing.csce.uark.edu</span></li>
+            <li>username: <span class="inline-emphasis">[ your uark id ]</span></li>
+            <li>password: <span class="inline-emphasis">[ your uark password ]</span></li>
+            <li>port: <span class="inline-emphasis">22</span></li>
+        </ul>
+        <p class="text">it should look something like the following. click <span class="inline-emphasis">Quickconnect</span></p>
+        <img src="images/filezilla-3.png">
+        <p class="text">2. Now, we’ll explore a bit. Below i have highlighted the important parts
+            (where u will be dragging and dropping files to copy over). I tried color coding/assigning numbers to this to help explain:
+        </p>
+        <ul>
+            <li>(1) This shows all the contents of ur local computer. I scrolled down and clicked on
+                “Desktop”</li>
+            <li>(1a) When u click on a folder from your local machine, all of its contents are
+                displayed in this window. So currently, it’s showing everything i have on my desktop.</li>
+            <li>(2) This window shows the contents of your Turing environment! You can see those
+                10 files/folders we saw at the very beginning from the terminal.</li>
+        </ul>
+        <img src="images/filezilla-4.png">
+        <p class="inline-bold">Copying files over is super simple -- you just navigate your directories in ( 1 ), and
+            then drag folders/files from ( 1a ) over to ( 2 )!
+        </p>
+        <p class="text">The following screenshots demonstrate me copying lab7 from my Desktop into Turing
+        </p>
+        <img src="images/filezilla-5.png">
+        <img src="images/filezilla-6.png">
+        <p class="text">& that's it! now we can ssh into Turing via the terminal/command prompt and see the file there:</p>
+        <img src="images/filezilla-7.png">
+    </div>
+
+    </div>
+<script src="../script.js"></script>
+</body>
+</html>

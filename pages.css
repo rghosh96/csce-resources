@@ -76,13 +76,13 @@
 .inline-bold {
   font-family: var(--bold);
   color: var(--grey);
-  font-size: 13px;
+  font-size: 17px;
 }
 
 .inline-link {
-  font-family: var(--monospace);
+  font-family: var(--bold);
   color: var(--red);
-  font-size: 15px;
+  font-size: 17px;
   text-decoration: none;
   transition: 0.3s ease-in;
 }
@@ -108,6 +108,12 @@
 
 ul {
   margin-left: 40px;
+}
+
+li {
+  font-family: var(--sans-serif-text) !important;
+  color: var(--grey);
+  font-size: 19px;
 }
 
 img {

@@ -62,9 +62,15 @@ h4 {
   letter-spacing: 2px;
 }
 
+h5 {
+  font-family: var(--monospace);
+  color: var(--red);
+  font-size: 21px;
+}
+
 .subtitle {
   width: 40%;
-  font-family: var(--sans-serif);
+  font-family: var(--sans-serif-text);
   font-size: 17px;
 }
 
