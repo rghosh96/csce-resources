@@ -2,7 +2,7 @@
 
 a vanilla JS, html, css site with a bunch of resources for uark CSCE students. tutorials on setting up coding environments (such as netbeans, terminal, etc) to how to use Turing/Filezilla, to installing Citrix -- it's a one stop shop :)
 
-[**visit here !!!**](https://rghosh96.github.io/foundations/)
+[**visit here !!!**](https://rghosh96.github.io/csce-resources/)
 
 ## Logging Issues to Update
 find a mistake somewhere? is a certain tutorial outdated, & needs to be updated? do you have another tutorial that could be useful that should be added? please log an issue, and **be sure to mark it with the appropriate label**. the labels are as follows:
